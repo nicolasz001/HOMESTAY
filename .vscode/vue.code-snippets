@@ -1,0 +1,197 @@
+{
+	 
+	"newVueOp": {
+		"prefix": "newVueOp",
+		"body": [
+			"<!----------Make By YourName---------------->",
+			" <template>",
+			"<div>",
+			"	<h1>Hello</h1>",
+			"	</div>",
+			"</template>",
+			"",
+			"	<script>",
+			"	import { get,sync,call } from \"vuex-pathify\"; ",
+			"export default {",
+				"	name: 'Root',",
+				"	/*-------------------------Load Component---------------------------------------*/",
+				"	components: {",
+					"",
+					"	},",
+					"  /*-------------------------Set Component---------------------------------------*/",
+						"props:{",
+							"",
+						"},",
+					"	/*-------------------------DataVarible---------------------------------------*/",
+					"	data() {",
+						"	return {",
+			"",
+							"		};",
+							"	}, ",
+							"	/*-------------------------Run Methods when Start this Page------------------------------------------*/",
+							"	 async mounted() {", 
+								"	/**** Call loading methods*/",
+								"			this.load(); ",
+								"	},",
+								"	/*-------------------------Run Methods when Start Routed------------------------------------------*/",
+								"	 async beforeRouteEnter(to, from, next) { ",
+									"		next()",
+									"	},",
+									"	/*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/",
+									"	computed:{",
+			"",
+			"},",
+										"	/*-------------------------Methods------------------------------------------*/",
+			"methods:{",
+											
+											"	/******* Methods default run ******/",
+											"	load:async function(){",
+			"}",
+			"},",
+												"	}",
+			"</script>"
+		],
+		"description": "Vue Templete"
+	},
+	"vcrud": {
+		"prefix": "vcrud",
+		"body": [
+			" //Open Modal method for set data when update",
+			" onUpdate$0Modal(params) { ",
+				"",
+            "},",
+            "//Open Modal method for add data",
+            "on$0Modal() {",
+"",
+            "},",
+            "//Close Modal and reload data",
+            "off$0Modal() {",
+               "",
+            "}, ",
+            "//getdefault form",
+            "defaultForm() {",
+              "" ,
+            "},",
+            "//Store data to vuex --post",
+           " storeData: async function () {",
+              "",
+            "},",
+             "//Update data to vuex --put",
+            "updateData: async function () {",
+              "",
+            "},",
+           "  //Delete data to vuex --delete",
+            "destroyData: async function (params) {",
+        "",
+           " },"
+		],
+		"description": "Vue Templete"
+	},
+
+	"vdialog": {
+		"prefix": "vdialog",
+		"body": [
+			"<modal name=\"user-modal\" resizable adaptive draggable :clickToClose=\"false\">",
+"<div class=\"modal-header lnav-deep wh\">",
+"	<h5 class=\"modal-title\" id=\"exampleModalCenterTitle\">Modal title</h5>",
+"	<button type=\"button\" class=\"close\" @click=\"offModal()\">",
+	"	<span aria-hidden=\"true\">&times;</span>",
+"	</button>",
+"</div>",
+"</modal>"
+		],
+		"description": "Vue Templete"
+	},
+	"vinput": {
+		"prefix": "vinput",
+		"body": [
+			"<input type=\"text\" class=\"form-control\" placeholder=\"${1}\" v-model=\"${2:form}\">",
+ 
+		],
+		"description": "Vue Templete"
+	},
+
+		 
+	"bconfirm": {
+		"prefix": "bconfirm",
+		"body": [
+			"this.$swal({",
+				"title: 'Are you sure?',",
+				"text: 'You won't be able to revert ',",
+				"type: 'warning',",
+				"showCancelButton: true,",
+				"confirmButtonColor: 'blue',",
+				"cancelButtonColor: '#d33',",
+				"confirmButtonText: 'Yes, delete it!' ",
+				"}).then((result) => {",
+					"if (result.value) {",
+						"",
+						"}",
+						"})"
+ 
+		],
+		"description": "Vue Templete"
+	},
+	"lselectserver": {
+		"prefix": "lselectserver",
+		"body": [
+			"<lselectServer :readonly=\"opporProView\"  :def=\"opporPro.product_id\" v-model=\"opporPro.product_id\" table=\"product\" by=\"product_name\" />"
+		],
+		"description": "Vue Templete"
+	},
+
+	"lselectc": {
+		"prefix": "lselectc",
+		"body": [
+			"<lselectc to=\"Frequency\"  label=\"Frequency\" v-model=\"opporPro.frequency\"  :readonly=\"opporProView\" />"
+		],
+		"description": "Vue Templete"
+	},
+
+	"lvdate": {
+		"prefix": "lvdate",
+		"body": [
+			 
+			"  <ldate label=\"Date\" :readonly=\"false\" v-model=\"yourmodel\"  :value=\"yourmodel\" />"
+		],
+		"description": "Vue Templete"
+	},
+	"laxios":{
+		"prefix":"laxios",
+		"body":[
+			"await Axios.post('/user/login', state.userLogin)",
+            ".then((r) => {" ,
+                 "",
+				"}).catch((e) => { ",
+					"",
+			" });"
+		]
+	},
+
+	"lload":{
+		"prefix":"lload",
+		"body":"await store.dispatch('loading/changeLoad',$true);"
+	},
+	
+	"lalert-error":{
+		"prefix":"lalert-error",
+		"body":"await store.dispatch('alert/onError',{text:'$text message'}) "
+	},
+	"lalert-success":{
+		"prefix":"lalert-success",
+		"body":"await store.dispatch('alert/onSuccess',{text:'$text message'}) "
+	},
+	"lalert-warn":{
+		"prefix":"lalert-warn",
+		"body":" await store.dispatch('alert/onWarn',{text:'$text message'})"
+	},
+	"lalert-blue":{
+		"prefix":"lalert-blue",
+		"body":"await store.dispatch('alert/onBlue',{text:'$text message'}) "
+	}
+	
+}    
+
+
+
+

@@ -1,0 +1,116 @@
+{
+	 
+	"dvc": {
+		"prefix": "dvc",
+		"body": [ 
+			"<div class='row'>",
+				"<div class='col-2'>",
+					"",
+				"</div>",
+				"<div class='col-2'>",
+					"",
+				"</div>",
+			"</div>",
+		],
+		"description": "grid"
+	},
+	"sty": {
+		"prefix": "sty",
+		"body": [ 
+			"style=\"\"  ",
+		],
+		"description": "grid"
+	},
+
+	"card": {
+		"prefix": "card",
+		"body": [ 
+		 "<b-card  bg-variant=\"dark\" text-variant=\"white\" title=\"Card Title\">",
+		"<p class=\"card-text\">",
+		 "  With supporting text below as a natural lead-in to additional content.",
+		 "</p>",
+		 "<b-button href=\"#\" variant=\"primary\">Go somewhere</b-button>",
+	   "</b-card>"
+		],
+		"description": "grid"
+	},
+	"bbtn": {
+		"prefix": "bbtn",
+		"body": [ 
+			" <b-button class=\"\" @click=\"\" >${0}</b-button>",
+		],
+		"description": "grid"
+	},
+	"alsuccess": {
+		"prefix": "alsuccess",
+		"body": [ 
+			"swal({",
+				"type: 'success',",
+				"title: 'Success...',",
+				"title: 'Your work has been finish'," ,
+				"}) ",
+		],
+		"description": "grid"
+	},
+
+	"alerror": {
+		"prefix": "alerror",
+		"body": [ 
+			"swal({",
+				"type: 'error',",
+				"title: 'Oops...',",
+				"text: 'Something went wrong!', ",
+				" })"
+		],
+		"description": "grid"
+	},
+
+	"alcus": {
+		"prefix": "alcus",
+		"body": [ 
+			"swal({",
+				"title: \"Delete Success\",",
+				"text: \"Remove data from database success.\",",
+				"imageUrl: \"https://cdn1.iconfinder.com/data/icons/appicns/513/appicns_Trash_Full.png\",",
+				"imageWidth: 160,",
+				"imageHeight: 160,",
+			 "})"
+		],
+		"description": "grid"
+	},
+	"inputx": {
+		"prefix": "inputx",
+		"body": [ 
+			"<input type=\"text\" class=\"form-control mrt-6\" placeholder=\"Email\" v-model=\"form.email\" required>",
+		],
+		"description": "grid"
+	},
+
+	"btable": {
+		"prefix": "btable",
+		"body": [ 
+			"<table class=\"table table-hover\">",
+			"<thead>",
+			"<tr class=\"lnav-deep wh\">",
+			"<th scope=\"col\">Id</th>",
+			"<th scope=\"col\">Email</th>",
+			"<th scope=\"col\">Name</th>",
+			"<th scope=\"col\">Permission</th>",
+			"<th scope=\"col\">Action</th>",
+			"</tr>",
+			"</thead>",
+			"<tbody>",
+			"<tr v-for=\"User in user\">",
+			"<th scope=\"row\"></th>",
+			"<td>",
+			"<b-btn @click=\"onUpdateModal(User)\" class=\"lbtn-deep circle\" style=\"border:none;\">Edit</b-btn>",
+			"<b-btn @click=\"destroyData(User)\" style=\"border:none;\" class=\"lbtn-not circle\">Delete</b-btn>",
+			"</td>",
+			"</tr>",
+			"</tbody>",
+			"</table>"
+		],
+		"description": "grid"
+	},
+
+}  
