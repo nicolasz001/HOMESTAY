@@ -1,0 +1,57 @@
+
+.round {
+    border-radius: 50px!important
+}
+
+.round-5 {
+    border-radius: 5px!important
+}
+
+.big {
+    width: 250px
+}
+
+.full-width {
+    width: 100%!important
+}
+
+.shadow-bl {
+    -webkit-box-shadow: 0 0 40px 0 rgba(113, 186, 250, 0.53);
+    -moz-box-shadow: 0 0 40px 0 rgba(113, 186, 250, 0.53);
+    box-shadow: 0 0 40px 0 rgba(113, 186, 250, 0.53)
+}
+
+.shadow-xs {
+    -webkit-box-shadow: 0 0 2px 0 rgba(184, 184, 184, 1);
+    -moz-box-shadow: 0 0 2px 0 rgba(184, 184, 184, 1);
+    box-shadow: 0 0 2px 0 rgba(184, 184, 184, 1)
+}
+
+.round-full {
+    border-radius: 50%!important
+}
+
+.no-border {
+    border: none!important
+}
+
+@import url(https://fonts.googleapis.com/css?family=Prompt:300);
+html,
+body,
+div,
+li,
+ul,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+label {
+    font-family: 'Prompt', sans-serif!important
+}
+
+.f {
+    font-family: 'Prompt', sans-serif
+}
