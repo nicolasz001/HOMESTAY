@@ -1,4 +1,4 @@
-# cattlevuemobile
+# Home stay Mobile appplication
 
 ## Project setup
 ```
