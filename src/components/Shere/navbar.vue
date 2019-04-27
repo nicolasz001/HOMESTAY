@@ -1,10 +1,44 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
-    <VToolbar color="primary">
-      
-    </VToolbar>
+    
+  <v-toolbar  >
+    <v-spacer></v-spacer>
+    <v-toolbar-items  fs40>
+      <v-btn flat >Link One</v-btn>
+      <v-btn flat>Link Two</v-btn>
+      <v-btn flat>Link Three</v-btn>
+    </v-toolbar-items>
+  </v-toolbar>
+ 
+  <v-navigation-drawer
+    class="gray  lighten-3"
+    dark
+    app
+  >
+    <v-list>
+      <v-list-tile
+        v-for="item in items"
+        :key="item.title"
+        @click="items"
+      >
+        <v-list-tile-action>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-tile-action>
+
+        <v-list-tile-content>
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list>
+  </v-navigation-drawer>
+ 
+ 
 </div>
+
+
+
+
 </template>
 
     
@@ -27,7 +61,11 @@ export default {
     /*-------------------------DataVarible---------------------------------------*/
     data() {
         return {
-
+             items: [
+          { title: 'Dashboard', icon: 'dashboard' },
+          { title: 'Account', icon: 'account_box' },
+          { title: 'Admin', icon: 'gavel' },
+             ]
         };
     },
     /*-------------------------Run Methods when Start this Page------------------------------------------*/

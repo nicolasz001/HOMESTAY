@@ -1,12 +1,26 @@
 <!----------Make By YourName---------------->
  <template>
-<v-carousel>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-    ></v-carousel-item>
-  </v-carousel>
+<div> 
+  <v-layout mrt-30 xs12   >
+    <v-flex  xs12 sm6 offset-sm3   >
+      <v-card style="height:130px; width:300px; ">
+      
+        <v-card-title>
+          <v-btn block color=" green" dark >Status</v-btn>
+          <div>
+            <span class="grey--text">Number 10</span><br>
+            <span>Whitehaven Beach</span><br>
+             
+          </div>
+        </v-card-title>
+        <v-card-actions>
+          
+          <v-btn class="mrl-180" flat color="orange">แก้ไข</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+  </v-layout>
+ </div>
 </template>
 
     <script>
@@ -24,20 +38,7 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
-items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-          }
-        ]
+ 
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/
