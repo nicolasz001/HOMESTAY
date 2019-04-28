@@ -1,43 +1,85 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
-    
-  <v-toolbar  >
-    <v-spacer></v-spacer>
-    <v-toolbar-items  fs40>
-      <v-btn flat >Link One</v-btn>
-      <v-btn flat>Link Two</v-btn>
-      <v-btn flat>Link Three</v-btn>
-    </v-toolbar-items>
-  </v-toolbar>
- 
-  <v-navigation-drawer
-    class="gray  lighten-3"
-    dark
-    app
-  >
-    <v-list>
-      <v-list-tile
-        v-for="item in items"
-        :key="item.title"
-        @click="items"
-      >
-        <v-list-tile-action>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-tile-action>
-
-        <v-list-tile-content>
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
-    </v-list>
-  </v-navigation-drawer>
- 
- 
+  
+  <v-app id="inspire">
+    <v-navigation-drawer
+      stateless
+      value="true"
+    >
+      <v-list>
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon>home</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title>Home</v-list-tile-title>
+        </v-list-tile>
+  
+        <v-list-group
+          prepend-icon="account_circle"
+          value="true"
+        >
+          <v-list-tile slot="activator">
+            <v-list-tile-title>Users</v-list-tile-title>
+          </v-list-tile>
+  
+          <v-list-group
+            no-action
+            sub-group
+            value="true"
+          >
+            <v-list-tile slot="activator">
+              <v-list-tile-title>Admin</v-list-tile-title>
+            </v-list-tile>
+  
+            <v-list-tile
+              v-for="(admin, i) in admins"
+              :key="i"
+              @click=""
+            >
+              <v-list-tile-title v-text="admin[0]"></v-list-tile-title>
+              <v-list-tile-action>
+                <v-icon v-text="admin[1]"></v-icon>
+              </v-list-tile-action>
+            </v-list-tile>
+          </v-list-group>
+  
+          <v-list-group
+            sub-group
+            no-action
+          >
+            <v-list-tile slot="activator">
+              <v-list-tile-title>Actions</v-list-tile-title>
+            </v-list-tile>
+  
+            <v-list-tile
+              v-for="(crud, i) in cruds"
+              :key="i"
+              @click=""
+            >
+            
+              <v-list-tile-title v-text="crud[0]"></v-list-tile-title>
+              <v-list-tile-action>
+                <v-icon v-text="crud[1]"></v-icon>
+              </v-list-tile-action>
+            </v-list-tile>
+              <v-list-tile
+              v-for="(crud, i) in cruds"
+              :key="i"
+              @click=""
+            >
+            
+              <v-list-tile-title v-text="crud[0]"></v-list-tile-title>
+              <v-list-tile-action>
+                <v-icon v-text="crud[1]"></v-icon>
+              </v-list-tile-action>
+            </v-list-tile>
+          </v-list-group>
+        </v-list-group>
+      </v-list>
+    </v-navigation-drawer>
+  </v-app>
 </div>
-
-
-
 
 </template>
 
@@ -49,6 +91,23 @@ import {
     call
 } from "vuex-pathify";
 export default {
+  data: () => ({
+    admins: [
+      ['Management', 'people_outline'],
+      ['Settings', 'settings']
+    ],
+    cruds: [
+      ['Create', 'add'],
+      ['Read', 'insert_drive_file'],
+      ['Update', 'update'],
+      ['Delete', 'delete']
+    ]
+  }),
+ 
+
+  props: {
+    source: String
+  },
     name: 'Root',
     /*-------------------------Load Component---------------------------------------*/
     components: {
@@ -60,12 +119,9 @@ export default {
     },
     /*-------------------------DataVarible---------------------------------------*/
     data() {
+      
         return {
-             items: [
-          { title: 'Dashboard', icon: 'dashboard' },
-          { title: 'Account', icon: 'account_box' },
-          { title: 'Admin', icon: 'gavel' },
-             ]
+           
         };
     },
     /*-------------------------Run Methods when Start this Page------------------------------------------*/
