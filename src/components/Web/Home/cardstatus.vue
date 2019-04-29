@@ -1,8 +1,8 @@
 <!----------Make By YourName---------------->
  <template>
 <div> 
-  <v-layout mrt-30 xs12   >
-    <v-flex  xs12 sm6 offset-sm3   >
+  <v-layout mrt-25    >
+    <v-flex  xs12 sm6 offset-sm3 x  >
       <v-card style="height:130px; width:300px; ">
       
         <v-card-title>
@@ -14,8 +14,7 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          
-          <v-btn class="mrl-180" flat color="orange">แก้ไข</v-btn>
+           <v-btn class="mrl-180 " flat color="orange">แก้ไข</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>

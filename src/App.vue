@@ -1,7 +1,7 @@
 <template> 
 <div id="app"
        >
-       <navbar/>
+
 
 <router-link to="home">Home</router-link><br>
 <router-link to="login">Login</router-link><br>
@@ -24,7 +24,7 @@
     import footer from '@/components/Shere/footer';
     export default {
         name: "App",
-        components: { navbar ,footer},
+        components: { navbar  },
         data: () => ({}),
         methods: {
             
