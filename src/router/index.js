@@ -21,8 +21,20 @@ function loadView(view) {
 export default new Router({
  
     routes: [
-
- 
+        {
+            path: '/test',
+            name: 'home',
+            component: loadView('test')
+             
+        }  ,
+        {
+            path: '/     datepicker',
+            name: '     datepicker',
+            component: loadView('  datepicker')
+             
+        }  ,
+        
+    
         {
             path: '/home',
             name: 'home',
