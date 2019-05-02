@@ -11,3 +11,4 @@ export default new Vuex.Store({
     plugins: [pathify.plugin],
     modules : modules
 })
+

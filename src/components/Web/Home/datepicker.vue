@@ -1,36 +1,8 @@
 <template>
    
-    <v-layout row wrap>
-      <v-flex xs12 lg6>
-        <v-menu
-          ref="menu1"
-          v-model="menu1"
-          :close-on-content-click="false"
-          :nudge-right="40"
-          lazy
-          transition="scale-transition"
-          offset-y
-          full-width
-          max-width="290px"
-          min-width="290px"
-        >
-          <template v-slot:activator="{ on }">
-            <v-text-field
-              v-model="dateFormatted"
-              label="Date"
-              hint="MM/DD/YYYY format"
-              persistent-hint
-              prepend-icon="event"
-              @blur="date = parseDate(dateFormatted)"
-              v-on="on"
-            ></v-text-field>
-          </template>
-          <v-date-picker v-model="date" no-title @input="menu1 = false"></v-date-picker>
-        </v-menu>
-        <p>Date in ISO format: <strong>{{ date }}</strong></p>
-      </v-flex>
-
-      <v-flex xs12 lg6>
+    
+      
+      <v-flex xs6 md2    mrl-500 style="margin-bottom:-50px;" >
         <v-menu
           v-model="menu2"
           :close-on-content-click="false"
@@ -41,12 +13,13 @@
           full-width
           max-width="290px"
           min-width="290px"
+        
         >
           <template v-slot:activator="{ on }">
             <v-text-field
               v-model="computedDateFormatted"
-              label="Date (read only text field)"
-              hint="MM/DD/YYYY format"
+               
+              
               persistent-hint
               prepend-icon="event"
               readonly
@@ -55,9 +28,9 @@
           </template>
           <v-date-picker v-model="date" no-title @input="menu2 = false"></v-date-picker>
         </v-menu>
-        <p>Date in ISO format: <strong>{{ date }}</strong></p>
+        <p>Date   <strong>{{ date }}</strong></p>
       </v-flex>
-    </v-layout>
+  
  
 </template>
 

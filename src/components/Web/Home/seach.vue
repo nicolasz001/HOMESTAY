@@ -1,37 +1,46 @@
 <!----------Make By YourName---------------->
- <template>
-<div> 
-  <v-layout mrt-25    >
-    <v-flex  xs12 md6 offset-sm3 x  >
-      <v-card style="height:130px; width:280px; ">
-      
-        <v-card-title>
-          <adddata/>
-       
-          <div>
-            <span class="grey--text">Number 10</span><br>
-            <span>Whitehaven Beach</span><br>
-             
-          </div>
-        </v-card-title>
-        <v-card-actions>
-           <v-btn class="mrl-150 " flat color="orange">Check Out</v-btn>
-            
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
- </div>
+<template>
+  <v-card>
+    <v-card-title>
+      Nutrition
+      <v-spacer></v-spacer>
+      <v-text-field
+        v-model="search"
+        append-icon="search"
+        label="Search"
+        single-line
+        hide-details
+      ></v-text-field>
+    </v-card-title>
+    <v-data-table
+      :headers="headers"
+      :items="desserts"
+      :search="search"
+    >
+      <template v-slot:items="props">
+        <td>{{ props.item.name }}</td>
+        <td class="text-xs-right">{{ props.item.calories }}</td>
+        <td class="text-xs-right">{{ props.item.fat }}</td>
+        <td class="text-xs-right">{{ props.item.carbs }}</td>
+        <td class="text-xs-right">{{ props.item.protein }}</td>
+        <td class="text-xs-right">{{ props.item.iron }}</td>
+      </template>
+      <template v-slot:no-results>
+        <v-alert :value="true" color="error" icon="warning">
+          Your search for "{{ search }}" found no results.
+        </v-alert>
+      </template>
+    </v-data-table>
+  </v-card>
 </template>
 
     <script>
     import { get,sync,call } from "vuex-pathify"; 
-    import adddata from "@/components/Web/Home/adddata";
 export default {
     name: 'Root',
     /*-------------------------Load Component---------------------------------------*/
     components: {
-adddata
+
     },
   /*-------------------------Set Component---------------------------------------*/
 props:{
@@ -40,7 +49,7 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
- 
+
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/

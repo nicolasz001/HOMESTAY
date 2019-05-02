@@ -23,14 +23,14 @@ export default new Router({
     routes: [
         {
             path: '/test',
-            name: 'home',
+            name: 'test',
             component: loadView('test')
              
         }  ,
         {
-            path: '/     datepicker',
-            name: '     datepicker',
-            component: loadView('  datepicker')
+            path: '/',
+            name: 'login',
+            component: loadView('login')
              
         }  ,
         
@@ -55,9 +55,9 @@ export default new Router({
              
         }  ,
         {
-            path: '/graph',
-            name: 'graph',
-            component: loadView('graph')
+            path: '/lineChart',
+            name: 'lineChart',
+            component: loadView('lineChart')
              
         }  ,
      
