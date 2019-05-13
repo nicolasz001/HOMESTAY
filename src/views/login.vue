@@ -4,7 +4,7 @@
     <v-parallax
       dark
       src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/47437203_948578151995409_1615773761976401920_o.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=6c10d8c3f7582655c065dc21de06c60d&oe=5D327F95"
-      height="900"
+      height="1000"
       jumbotron 
     >
 

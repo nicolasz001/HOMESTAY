@@ -14,7 +14,7 @@
 
             <template v-slot:activator="{ on }">
               
-              <v-btn color="primary" dark  v-on="on">เพิ่มข้อมูล </v-btn>
+              <v-btn color="green" class="wd300 hg130 black" dark    v-on="on"  >State </v-btn>
             </template>
             
             <v-card>

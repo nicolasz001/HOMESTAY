@@ -1,35 +1,21 @@
-<template> 
-<v-app>
-  
- 
+<template>
+  <div id="app">
+    <v-app>
      
-<!-- <router-link mrl to="Home">home</router-link>
-<router-link to="login">login</router-link>
-<router-link to="detail">detail</router-link>
-<router-link to="test">test</router-link> -->
- 
-  <navbar/>
-    
+       
+       
       <router-view/>
-   
- 
-  </v-app>
+    </v-app>
+  </div>
 </template>
 
 <script>
 import axios from "@/axios";
-import navbar from "@/components/Shere/navbar";
- 
-
- 
- 
+  
 export default {
   
-
-
-
   name: "App",
-  components: { navbar   },
+  components: {    },
   data: () => ({}),
   methods: {},
   async mounted() {},

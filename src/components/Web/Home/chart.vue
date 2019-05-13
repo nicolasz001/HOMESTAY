@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" >
 		
-     <v-flex md12>
-    <div  ref="chart" class="chart mrl-550 mrb-150"></div>
+     <v-flex md12 xs12 >
+    <div  ref="chart" class="chart mrt-100 "></div>
 		   
      </v-flex>
+
+     
   </div>
 	
 </template>

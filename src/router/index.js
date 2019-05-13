@@ -61,10 +61,22 @@ export default new Router({
              
         }  ,
      
+        {
+            path: '/showcalendar',
+            name: 'showcalendar',
+            component: loadView('showcalendar')
              
-       
-         
+        }  ,
      
+        {
+            path: '/print',
+            name: 'print',
+            component: loadView('print')
+             
+        }  ,
+     
+         
+         
        
     ]
     

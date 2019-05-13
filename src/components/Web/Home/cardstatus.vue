@@ -1,23 +1,18 @@
 <!----------Make By YourName---------------->
  <template>
 <div> 
-  <v-layout mrt-25    >
-    <v-flex  xs12 md6 offset-sm3 x  >
-      <v-card style="height:130px; width:280px; ">
+  <v-layout mrt-20   >
+    <v-flex  xs1 md6 offset-sm3 x  >
+      <v-card style="  width:350px;  ">
       
         <v-card-title>
           <adddata/>
        
           <div>
-            <span class="grey--text">Number 10</span><br>
-            <span>Whitehaven Beach</span><br>
-             
+                          
           </div>
         </v-card-title>
-        <v-card-actions>
-           <v-btn class="mrl-150 " flat color="orange">Check Out</v-btn>
-            
-        </v-card-actions>
+         
       </v-card>
     </v-flex>
   </v-layout>

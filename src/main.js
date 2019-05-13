@@ -6,6 +6,7 @@ import "@mdi/font/css/materialdesignicons.min.css"
 import App from './App.vue'
 import router from './router/'
  
+ 
 
 
 import "@/assets/core.css"
@@ -16,6 +17,7 @@ import "@/assets/size.css"
 import "@/assets/color.css"
 import 'animate.css'
 Vue.config.productionTip = false
+
 
 import VueQrcodeReader from 'vue-qrcode-reader'
 const moment = require('moment');

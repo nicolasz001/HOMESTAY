@@ -1,30 +1,33 @@
 <!----------Make By YourName---------------->
  <template>
-<div>
- 
-     <v-parallax
-          app
-          dark
-          src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/47437203_948578151995409_1615773761976401920_o.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=6c10d8c3f7582655c065dc21de06c60d&oe=5D327F95"
-          height="900"
-          jumbotron
-        >
-        
-<chart/>
+<div >
    
-  </v-parallax>
+   <v-flex md  row wrap app>
+    <h1 class="mrl-50 mrt-100 xs "  >ข้อมูลทั้งหมด</h1>
+     <chart /> 
+ 
+  
+    
+<detail/>
+ 
+ </v-flex>
+ <navbar />
+   
   
   </div>
 </template>
 
   <script>
-  import { get,sync,call } from "vuex-pathify"; 
+import { get,sync,call } from "vuex-pathify"; 
  import Chart from "@/components/Web/Home/chart";
+ import navbar from '@/components/Shere/navbar.vue'
+ import detail from "@/views/detail";
 export default {
   name: 'Root',
   /*-------------------------Load Component---------------------------------------*/
   components: {
-    Chart
+    Chart,
+    navbar,detail
 
   },
   /*-------------------------Set Component---------------------------------------*/
